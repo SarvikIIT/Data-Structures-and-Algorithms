@@ -31,7 +31,16 @@ ds-algo-header-files/
 │   │   ├── quick_sort.hpp   # Quick sort implementation
 │   │   └── merge_sort.hpp   # Merge sort implementation
 │   └── math/                # Mathematical algorithms
-│       └── prime_sieve.hpp  # Prime sieve and number theory
+│       ├── prime_sieve.hpp  # Prime sieve and number theory
+│       ├── gcd_lcm.hpp      # GCD and LCM functions
+│       ├── modular_arithmetic.hpp # Modular arithmetic operations
+│       ├── combinatorics.hpp # Combinatorics functions (nCr)
+│       ├── euler_totient.hpp # Euler's Totient function
+│       ├── fibonacci.hpp    # Fibonacci sequence algorithms
+│       ├── factorial.hpp    # Factorial precomputation
+│       ├── binomial_coefficients.hpp # Binomial coefficient calculation
+│       ├── is_prime.hpp     # Prime number checking algorithms
+│       └── square_root.hpp  # Square root algorithms
 ├── utilities/               # Utility functions and common definitions
 │   ├── common.hpp           # Common types and macros
 │   ├── math_utils.hpp       # Mathematical utilities
@@ -50,19 +59,19 @@ ds-algo-header-files/
 ## 🛠️ Data Structures
 
 ### Segment Tree
-- **File**: `data_structures/segment_tree.h`
+- **File**: `data_structures/segment_tree.hpp`
 - **Features**: Range queries, point updates, range updates with lazy propagation
 - **Time Complexity**: O(log n) for queries and updates
 - **Use Cases**: Range minimum/maximum queries, range sum queries
 
 ### Disjoint Set Union (DSU)
-- **File**: `data_structures/dsu.h`
+- **File**: `data_structures/dsu.hpp`
 - **Features**: Path compression, union by rank, set size tracking
 - **Time Complexity**: O(α(n)) amortized (practically constant)
 - **Use Cases**: Connected components, minimum spanning tree (Kruskal's)
 
 ### Binary Search Tree
-- **File**: `data_structures/binary_search_tree.h`
+- **File**: `data_structures/binary_search_tree.hpp`
 - **Features**: Insertion, deletion, search, traversal
 - **Time Complexity**: O(log n) average, O(n) worst case
 - **Use Cases**: Dynamic sorted data, range queries
@@ -119,6 +128,51 @@ ds-algo-header-files/
   - Segmented sieve
   - Prime factorization
   - Number theory functions
+- **GCD and LCM** (`algorithms/math/gcd_lcm.hpp`)
+  - Euclidean algorithm
+  - Extended Euclidean algorithm
+  - LCM calculation
+  - Binary GCD algorithm
+- **Modular Arithmetic** (`algorithms/math/modular_arithmetic.hpp`)
+  - Modular exponentiation
+  - Modular inverse
+  - Modular addition/multiplication
+  - Chinese Remainder Theorem
+- **Combinatorics** (`algorithms/math/combinatorics.hpp`)
+  - nCr calculation
+  - Factorial computation
+  - Permutations and combinations
+  - Pascal's triangle
+- **Euler Totient** (`algorithms/math/euler_totient.hpp`)
+  - Totient function calculation
+  - Totient sieve
+  - Totient properties
+  - Euler's theorem applications
+- **Fibonacci** (`algorithms/math/fibonacci.hpp`)
+  - Matrix exponentiation
+  - Fast doubling method
+  - Fibonacci modulo
+  - Lucas numbers
+- **Factorial** (`algorithms/math/factorial.hpp`)
+  - Factorial precomputation
+  - Factorial modulo
+  - Wilson's theorem
+  - Factorial properties
+- **Binomial Coefficients** (`algorithms/math/binomial_coefficients.hpp`)
+  - Pascal's triangle
+  - Lucas theorem
+  - Multiplicative formula
+  - Symmetry properties
+- **Prime Checking** (`algorithms/math/is_prime.hpp`)
+  - Basic prime checking
+  - Fermat's test
+  - Miller-Rabin test
+  - AKS primality test
+- **Square Root** (`algorithms/math/square_root.hpp`)
+  - Binary search method
+  - Newton's method
+  - Babylonian method
+  - Integer square root
 
 ## 🧮 Dynamic Programming
 
@@ -151,9 +205,9 @@ ds-algo-header-files/
 ### Basic Usage
 
 ```cpp
-#include "utilities/common.h"
-#include "data_structures/segment_tree.h"
-#include "algorithms/graph_algorithms.h"
+#include "utilities/common.hpp"
+#include "data_structures/segment_tree.hpp"
+#include "algorithms/graph/dijkstra.hpp"
 
 int main() {
     // Example: Using Segment Tree
@@ -164,7 +218,7 @@ int main() {
     
     // Example: Using Graph Algorithms
     vector<vpii> graph = {{{1, 4}, {2, 1}}, {{2, 2}, {3, 5}}, {{3, 1}}, {}};
-    vi distances = GraphAlgorithms::dijkstra(graph, 0);
+    vi distances = Dijkstra::shortestPath(graph, 0);
     
     for (int i = 0; i < sz(distances); i++) {
         cout << "Distance to " << i << ": " << distances[i] << endl;
@@ -192,7 +246,7 @@ g++ -std=c++17 -O2 -o solution solution.cpp
 
 ## 🎯 Competitive Programming Tips
 
-1. **Always include the utilities**: Start with `#include "utilities/common.h"`
+1. **Always include the utilities**: Start with `#include "utilities/common.hpp"`
 2. **Use fast I/O**: The library includes optimized input/output functions
 3. **Modular approach**: Include only what you need to reduce compilation time
 4. **Memory management**: All implementations are memory-efficient

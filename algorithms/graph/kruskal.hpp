@@ -82,3 +82,4 @@ public:
 };
 
 #endif // KRUSKAL_HPP
+
