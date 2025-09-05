@@ -26,10 +26,14 @@ ds-algo-header-files/
 │   │   └── bfs_dfs.hpp      # BFS, DFS, topological sort
 │   ├── search/              # Search algorithms
 │   │   ├── binary_search.hpp # Binary search variants
-│   │   └── linear_search.hpp # Linear search algorithms
+│   │   ├── linear_search.hpp # Linear search algorithms
+│   │   └── ternary_search.hpp # Ternary search algorithms
 │   ├── sorting/             # Sorting algorithms
 │   │   ├── quick_sort.hpp   # Quick sort implementation
-│   │   └── merge_sort.hpp   # Merge sort implementation
+│   │   ├── merge_sort.hpp   # Merge sort implementation
+│   │   ├── bubble_sort.hpp  # Bubble sort implementation
+│   │   ├── insertion_sort.hpp # Insertion sort implementation
+│   │   └── selection_sort.hpp # Selection sort implementation
 │   └── math/                # Mathematical algorithms
 │       ├── prime_sieve.hpp  # Prime sieve and number theory
 │       ├── gcd_lcm.hpp      # GCD and LCM functions
@@ -40,7 +44,9 @@ ds-algo-header-files/
 │       ├── factorial.hpp    # Factorial precomputation
 │       ├── binomial_coefficients.hpp # Binomial coefficient calculation
 │       ├── is_prime.hpp     # Prime number checking algorithms
-│       └── square_root.hpp  # Square root algorithms
+│       ├── square_root.hpp  # Square root algorithms
+│       ├── power.hpp        # Power and exponentiation algorithms
+│       └── divisors.hpp     # Divisor and factor algorithms
 ├── utilities/               # Utility functions and common definitions
 │   ├── common.hpp           # Common types and macros
 │   ├── math_utils.hpp       # Mathematical utilities
@@ -109,6 +115,11 @@ ds-algo-header-files/
   - Find all occurrences
   - 2D array search
   - Custom predicate search
+- **Ternary Search** (`algorithms/search/ternary_search.hpp`)
+  - Unimodal function search
+  - Peak finding
+  - Real number ternary search
+  - Custom comparator support
 
 ### Sorting Algorithms
 - **Quick Sort** (`algorithms/sorting/quick_sort.hpp`)
@@ -121,6 +132,21 @@ ds-algo-header-files/
   - Bottom-up implementation
   - In-place merge
   - Inversion counting
+- **Bubble Sort** (`algorithms/sorting/bubble_sort.hpp`)
+  - Standard and optimized
+  - Cocktail sort
+  - Custom comparators
+  - Performance analysis
+- **Insertion Sort** (`algorithms/sorting/insertion_sort.hpp`)
+  - Standard and binary insertion
+  - Shell sort
+  - Custom comparators
+  - In-place sorting
+- **Selection Sort** (`algorithms/sorting/selection_sort.hpp`)
+  - Standard and stable
+  - Custom comparators
+  - Performance analysis
+  - Partial sorting
 
 ### Mathematical Algorithms
 - **Prime Sieve** (`algorithms/math/prime_sieve.hpp`)
@@ -173,6 +199,16 @@ ds-algo-header-files/
   - Newton's method
   - Babylonian method
   - Integer square root
+- **Power and Exponentiation** (`algorithms/math/power.hpp`)
+  - Binary exponentiation
+  - Modular exponentiation
+  - Matrix exponentiation
+  - Power of 2 optimizations
+- **Divisors and Factors** (`algorithms/math/divisors.hpp`)
+  - Find all divisors
+  - Prime factorization
+  - GCD and LCM
+  - Perfect/abundant/deficient numbers
 
 ## 🧮 Dynamic Programming
 
