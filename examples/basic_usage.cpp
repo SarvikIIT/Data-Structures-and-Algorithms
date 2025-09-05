@@ -12,9 +12,11 @@
 #include "utilities/common.hpp"
 #include "data_structures/segment_tree.hpp"
 #include "data_structures/dsu.hpp"
-#include "algorithms/graph_algorithms.hpp"
-#include "algorithms/binary_search.hpp"
-#include "algorithms/sorting.hpp"
+#include "algorithms/graph/dijkstra.hpp"
+#include "algorithms/graph/bfs_dfs.hpp"
+#include "algorithms/search/binary_search.hpp"
+#include "algorithms/sorting/quick_sort.hpp"
+#include "algorithms/math/prime_sieve.hpp"
 
 void segmentTreeExample() {
     cout << "=== Segment Tree Example ===" << endl;
@@ -80,7 +82,7 @@ void graphAlgorithmsExample() {
         cout << endl;
     }
     
-    vi distances = GraphAlgorithms::dijkstra(graph, 0);
+    vi distances = Dijkstra::shortestPath(graph, 0);
     cout << "\nShortest distances from node 0:" << endl;
     for (int i = 0; i < 4; i++) {
         cout << "To node " << i << ": " << distances[i] << endl;
@@ -124,26 +126,20 @@ void sortingExample() {
     cout << endl;
     
     vi quickArr = arr;
-    Sorting::quickSort(quickArr, 0, sz(quickArr) - 1);
+    QuickSort::sort(quickArr, 0, sz(quickArr) - 1);
     cout << "Quick sort: ";
     for (int x : quickArr) cout << x << " ";
     cout << endl;
     
     vi mergeArr = arr;
-    Sorting::mergeSort(mergeArr, 0, sz(mergeArr) - 1);
+    MergeSort::sort(mergeArr, 0, sz(mergeArr) - 1);
     cout << "Merge sort: ";
     for (int x : mergeArr) cout << x << " ";
     cout << endl;
     
-    vi heapArr = arr;
-    Sorting::heapSort(heapArr);
-    cout << "Heap sort: ";
-    for (int x : heapArr) cout << x << " ";
-    cout << endl;
-    
     // Custom sorting
     vi customArr = arr;
-    Sorting::customSort(customArr, [](int a, int b) {
+    QuickSort::sortWithComparator(customArr, 0, sz(customArr) - 1, [](int a, int b) {
         return a > b; // Sort in descending order
     });
     cout << "Custom sort (descending): ";
@@ -170,6 +166,37 @@ void mathUtilsExample() {
     cout << endl;
 }
 
+void primeSieveExample() {
+    cout << "=== Prime Sieve Example ===" << endl;
+    
+    PrimeSieve::initialize();
+    
+    cout << "First 10 primes: ";
+    vi primes = PrimeSieve::getPrimes(30);
+    for (int i = 0; i < min(10, sz(primes)); i++) {
+        cout << primes[i] << " ";
+    }
+    cout << endl;
+    
+    int num = 60;
+    cout << "Prime factorization of " << num << ": ";
+    vector<pii> factors = PrimeSieve::primeFactorization(num);
+    for (auto& factor : factors) {
+        cout << factor.ff << "^" << factor.ss << " ";
+    }
+    cout << endl;
+    
+    cout << "Divisors of " << num << ": ";
+    vi divisors = PrimeSieve::getDivisors(num);
+    for (int div : divisors) {
+        cout << div << " ";
+    }
+    cout << endl;
+    
+    cout << "Euler's totient of " << num << ": " << PrimeSieve::eulerTotient(num) << endl;
+    cout << endl;
+}
+
 signed main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -183,6 +210,7 @@ signed main() {
     binarySearchExample();
     sortingExample();
     mathUtilsExample();
+    primeSieveExample();
     
     cout << "=== All examples completed successfully! ===" << endl;
     

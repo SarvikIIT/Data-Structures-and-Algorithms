@@ -15,22 +15,35 @@ A comprehensive C++ library of data structures and algorithms optimized for comp
 ```
 ds-algo-header-files/
 ├── data_structures/          # Core data structure implementations
-│   ├── segment_tree.h        # Segment Tree with Lazy Propagation
-│   ├── dsu.h                # Disjoint Set Union (Union-Find)
-│   └── binary_search_tree.h # Binary Search Tree implementation
+│   ├── segment_tree.hpp      # Segment Tree with Lazy Propagation
+│   ├── dsu.hpp              # Disjoint Set Union (Union-Find)
+│   └── binary_search_tree.hpp # Binary Search Tree implementation
 ├── algorithms/               # Algorithm implementations
-│   ├── graph_algorithms.h   # Graph algorithms (Dijkstra, BFS, DFS, etc.)
-│   ├── binary_search.h      # Binary search variants
-│   └── sorting.h            # Sorting algorithms
+│   ├── graph/               # Graph algorithms
+│   │   ├── dijkstra.hpp     # Dijkstra's shortest path
+│   │   ├── bellman_ford.hpp # Bellman-Ford algorithm
+│   │   ├── kruskal.hpp      # Kruskal's MST algorithm
+│   │   └── bfs_dfs.hpp      # BFS, DFS, topological sort
+│   ├── search/              # Search algorithms
+│   │   ├── binary_search.hpp # Binary search variants
+│   │   └── linear_search.hpp # Linear search algorithms
+│   ├── sorting/             # Sorting algorithms
+│   │   ├── quick_sort.hpp   # Quick sort implementation
+│   │   └── merge_sort.hpp   # Merge sort implementation
+│   └── math/                # Mathematical algorithms
+│       └── prime_sieve.hpp  # Prime sieve and number theory
 ├── utilities/               # Utility functions and common definitions
-│   ├── common.h             # Common types and macros
-│   ├── math_utils.h         # Mathematical utilities
-│   └── hash_utils.h         # Hash functions and safe containers
+│   ├── common.hpp           # Common types and macros
+│   ├── math_utils.hpp       # Mathematical utilities
+│   └── hash_utils.hpp       # Hash functions and safe containers
 ├── dp_problems/             # Dynamic Programming problem solutions
 │   ├── fibonacci.cpp        # Fibonacci sequence implementations
 │   ├── longest_increasing_subsequence.cpp
 │   └── coin_change.cpp      # Coin change problem variants
 ├── examples/                # Usage examples and test cases
+│   └── basic_usage.cpp      # Comprehensive usage examples
+├── LICENSE                  # MIT License
+├── CONTRIBUTING.md          # Contribution guidelines
 └── README.md               # This file
 ```
 
@@ -57,33 +70,55 @@ ds-algo-header-files/
 ## 🔧 Algorithms
 
 ### Graph Algorithms
-- **File**: `algorithms/graph_algorithms.h`
-- **Features**:
-  - Dijkstra's Algorithm (shortest path)
-  - Bellman-Ford Algorithm (negative weights)
-  - Kruskal's Algorithm (MST)
-  - BFS/DFS traversal
+- **Dijkstra's Algorithm** (`algorithms/graph/dijkstra.hpp`)
+  - Single source shortest path
+  - Non-negative edge weights
+  - Path reconstruction
+- **Bellman-Ford Algorithm** (`algorithms/graph/bellman_ford.hpp`)
+  - Handles negative edge weights
+  - Negative cycle detection
+  - Path reconstruction
+- **Kruskal's Algorithm** (`algorithms/graph/kruskal.hpp`)
+  - Minimum spanning tree
+  - Union-Find based
+  - Connectivity checking
+- **BFS/DFS** (`algorithms/graph/bfs_dfs.hpp`)
+  - Graph traversal
   - Topological sort
   - Cycle detection
+  - Connected components
 
-### Binary Search
-- **File**: `algorithms/binary_search.h`
-- **Features**:
+### Search Algorithms
+- **Binary Search** (`algorithms/search/binary_search.hpp`)
   - Standard binary search
   - Lower/upper bound
   - Binary search on answer
   - Real number binary search
+  - Square root and nth root
+- **Linear Search** (`algorithms/search/linear_search.hpp`)
+  - Linear search variants
+  - Find all occurrences
+  - 2D array search
   - Custom predicate search
 
 ### Sorting Algorithms
-- **File**: `algorithms/sorting.h`
-- **Features**:
-  - Quick Sort
-  - Merge Sort
-  - Heap Sort
-  - Counting Sort
-  - Radix Sort
-  - Custom comparator sorting
+- **Quick Sort** (`algorithms/sorting/quick_sort.hpp`)
+  - Standard and randomized
+  - 3-way partitioning
+  - Quick select
+  - Custom comparators
+- **Merge Sort** (`algorithms/sorting/merge_sort.hpp`)
+  - Stable sorting
+  - Bottom-up implementation
+  - In-place merge
+  - Inversion counting
+
+### Mathematical Algorithms
+- **Prime Sieve** (`algorithms/math/prime_sieve.hpp`)
+  - Sieve of Eratosthenes
+  - Segmented sieve
+  - Prime factorization
+  - Number theory functions
 
 ## 🧮 Dynamic Programming
 
