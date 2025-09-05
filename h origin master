@@ -1,0 +1,4 @@
+[33m33286d2[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m done finally :)
+[33mf1f98ea[m[33m ([m[1;31morigin/master[m[33m)[m Break down algorithms into separate files and update structure
+[33m4bb76df[m Convert header files to .hpp extension for proper C++ recognition
+[33mc368547[m Initial commit: Data Structures and Algorithmic Work library

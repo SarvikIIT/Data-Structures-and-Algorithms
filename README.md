@@ -54,7 +54,15 @@ ds-algo-header-files/
 ├── dp_problems/             # Dynamic Programming problem solutions
 │   ├── fibonacci.cpp        # Fibonacci sequence implementations
 │   ├── longest_increasing_subsequence.cpp
-│   └── coin_change.cpp      # Coin change problem variants
+│   ├── coin_change.cpp      # Coin change problem variants
+│   ├── edit_distance.cpp    # Edit distance (Levenshtein)
+│   ├── frog_jump.cpp        # Frog jump (1-2 steps)
+│   ├── frog_jump_k_steps.cpp # Frog jump (up to K steps)
+│   ├── grid_paths.cpp       # Grid paths with obstacles
+│   ├── subset_sum.cpp       # Subset sum problem
+│   ├── unique_paths.cpp     # Unique paths in grid
+│   ├── climbing_stairs.cpp  # Climbing stairs with broken steps
+│   └── dice_combinations.cpp # Dice combinations problem
 ├── examples/                # Usage examples and test cases
 │   └── basic_usage.cpp      # Comprehensive usage examples
 ├── LICENSE                  # MIT License
@@ -235,6 +243,32 @@ ds-algo-header-files/
   - Count of ways to make change
   - Solution reconstruction
   - Space-optimized solutions
+
+### Additional DP Problems
+- **Edit Distance** (`dp_problems/edit_distance.cpp`)
+  - Levenshtein distance calculation
+  - String transformation with minimum operations
+- **Frog Jump** (`dp_problems/frog_jump.cpp`)
+  - 1D DP with 1-2 step jumps
+  - Memoization and tabulation approaches
+- **Frog Jump K Steps** (`dp_problems/frog_jump_k_steps.cpp`)
+  - 1D DP with up to K step jumps
+  - Optimized for larger step ranges
+- **Grid Paths** (`dp_problems/grid_paths.cpp`)
+  - 2D DP with obstacles
+  - Path counting with modular arithmetic
+- **Subset Sum** (`dp_problems/subset_sum.cpp`)
+  - Knapsack-style DP
+  - Finding all possible sums
+- **Unique Paths** (`dp_problems/unique_paths.cpp`)
+  - 2D DP for path counting
+  - Combinatorial approach
+- **Climbing Stairs** (`dp_problems/climbing_stairs.cpp`)
+  - 1D DP with broken steps
+  - Step counting with constraints
+- **Dice Combinations** (`dp_problems/dice_combinations.cpp`)
+  - 1D DP for dice sum counting
+  - Modular arithmetic for large numbers
 
 ## 🚀 Quick Start
 
