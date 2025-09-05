@@ -11,7 +11,7 @@
  * - String and binary manipulation functions
  * - Vector utility functions
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 

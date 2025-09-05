@@ -12,14 +12,14 @@
  * The custom hash function is designed to be fast and provide good distribution
  * while being resistant to collision attacks that can cause performance degradation.
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef HASH_UTILS_H
 #define HASH_UTILS_H
 
-#include "common.h"
+#include "common.hpp"
 
 // Custom hash for unordered containers to avoid hash collision attacks
 struct custom_hash {

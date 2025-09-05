@@ -13,12 +13,12 @@
  * - Tabulation: O(n) with O(n) space
  * - Space optimized: O(n) with O(1) space
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
-#include "utilities/common.h"
-#include "utilities/math_utils.h"
+#include "utilities/common.hpp"
+#include "utilities/math_utils.hpp"
 
 class Fibonacci {
 private:

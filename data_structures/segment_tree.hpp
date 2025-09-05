@@ -20,14 +20,14 @@
  * 
  * Space Complexity: O(4n)
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef SEGMENT_TREE_H
 #define SEGMENT_TREE_H
 
-#include "utilities/common.h"
+#include "utilities/common.hpp"
 
 class SegmentTree {
 private:

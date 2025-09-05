@@ -13,14 +13,14 @@
  * All implementations are optimized for competitive programming with proper
  * handling of edge cases and integer overflow prevention.
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef BINARY_SEARCH_H
 #define BINARY_SEARCH_H
 
-#include "utilities/common.h"
+#include "utilities/common.hpp"
 
 class BinarySearch {
 public:

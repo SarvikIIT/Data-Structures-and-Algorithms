@@ -12,14 +12,14 @@
  * All operations are designed to work with large numbers using modular arithmetic
  * to prevent overflow in competitive programming contexts.
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef MATH_UTILS_H
 #define MATH_UTILS_H
 
-#include "common.h"
+#include "common.hpp"
 
 // Modular arithmetic
 inline ll mod(ll x) { return ((x % MOD + MOD) % MOD); }

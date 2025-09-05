@@ -17,12 +17,12 @@
  * - Tabulation: O(amount * coins)
  * - Space Optimized: O(amount * coins) with O(amount) space
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
-#include "utilities/common.h"
-#include "utilities/math_utils.h"
+#include "utilities/common.hpp"
+#include "utilities/math_utils.hpp"
 
 class CoinChange {
 private:

@@ -17,14 +17,14 @@
  * 
  * Space Complexity: O(n)
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef DSU_H
 #define DSU_H
 
-#include "utilities/common.h"
+#include "utilities/common.hpp"
 
 class DSU {
 private:

@@ -15,13 +15,13 @@
  * - Binary Search: O(n log n)
  * - Segment Tree: O(n log n)
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
-#include "utilities/common.h"
-#include "utilities/math_utils.h"
-#include "algorithms/binary_search.h"
+#include "utilities/common.hpp"
+#include "utilities/math_utils.hpp"
+#include "algorithms/binary_search.hpp"
 
 class LIS {
 private:

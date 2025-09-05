@@ -14,14 +14,14 @@
  * All algorithms are optimized for competitive programming with proper
  * handling of edge cases and performance considerations.
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef SORTING_H
 #define SORTING_H
 
-#include "utilities/common.h"
+#include "utilities/common.hpp"
 
 class Sorting {
 public:

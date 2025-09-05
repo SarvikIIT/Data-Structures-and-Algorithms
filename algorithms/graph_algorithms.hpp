@@ -14,15 +14,15 @@
  * All algorithms are optimized for competitive programming with proper
  * time and space complexity considerations.
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef GRAPH_ALGORITHMS_H
 #define GRAPH_ALGORITHMS_H
 
-#include "utilities/common.h"
-#include "data_structures/dsu.h"
+#include "utilities/common.hpp"
+#include "data_structures/dsu.hpp"
 
 class GraphAlgorithms {
 private:

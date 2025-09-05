@@ -5,16 +5,16 @@
  * This file demonstrates how to use various components of the library
  * in competitive programming scenarios.
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
-#include "utilities/common.h"
-#include "data_structures/segment_tree.h"
-#include "data_structures/dsu.h"
-#include "algorithms/graph_algorithms.h"
-#include "algorithms/binary_search.h"
-#include "algorithms/sorting.h"
+#include "utilities/common.hpp"
+#include "data_structures/segment_tree.hpp"
+#include "data_structures/dsu.hpp"
+#include "algorithms/graph_algorithms.hpp"
+#include "algorithms/binary_search.hpp"
+#include "algorithms/sorting.hpp"
 
 void segmentTreeExample() {
     cout << "=== Segment Tree Example ===" << endl;

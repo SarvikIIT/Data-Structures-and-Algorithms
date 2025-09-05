@@ -22,14 +22,14 @@
  * 
  * Space Complexity: O(n)
  * 
- * @author Competitive Programming Library
+ * @author Sarvik
  * @version 1.0
  */
 
 #ifndef BINARY_SEARCH_TREE_H
 #define BINARY_SEARCH_TREE_H
 
-#include "utilities/common.h"
+#include "utilities/common.hpp"
 
 struct TreeNode {
     int val;
